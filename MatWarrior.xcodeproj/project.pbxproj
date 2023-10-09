@@ -17,6 +17,7 @@
 		409B93F22ACC4291004CCF0A /* PlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409B93F12ACC4291004CCF0A /* PlaceViewModel.swift */; };
 		409B93F52ACC5A5D004CCF0A /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409B93F42ACC5A5D004CCF0A /* BottomSheetViewController.swift */; };
 		409B94212ACEFF7C004CCF0A /* LaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 409B94202ACEFF7C004CCF0A /* LaunchScreen.png */; };
+		B6AEB7B9841B227988A7504E /* Pods_MatWarrior.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E1A42467E6F6AB19EFDA02 /* Pods_MatWarrior.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		409B93F12ACC4291004CCF0A /* PlaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewModel.swift; sourceTree = "<group>"; };
 		409B93F42ACC5A5D004CCF0A /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 		409B94202ACEFF7C004CCF0A /* LaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreen.png; sourceTree = "<group>"; };
+		49E1A42467E6F6AB19EFDA02 /* Pods_MatWarrior.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatWarrior.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6713A2F04621379B458EB0D4 /* Pods-MatWarrior.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatWarrior.release.xcconfig"; path = "Target Support Files/Pods-MatWarrior/Pods-MatWarrior.release.xcconfig"; sourceTree = "<group>"; };
 		B041AEFCDC77152EBAFFB845 /* Pods-MatWarrior.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatWarrior.debug.xcconfig"; path = "Target Support Files/Pods-MatWarrior/Pods-MatWarrior.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -41,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6AEB7B9841B227988A7504E /* Pods_MatWarrior.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +146,7 @@
 		8B7A138671784420E5D798D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				49E1A42467E6F6AB19EFDA02 /* Pods_MatWarrior.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

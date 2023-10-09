@@ -13,12 +13,14 @@ struct Place {
     let latitude: Double
     let longitude: Double
     let date: String
+    let deadlineApplications: String
     
-    init(name: String, address: String, latitude: Double, longitude: Double, date: String) {
+    init(name: String, address: String, latitude: Double, longitude: Double, date: String, deadlineApplications: String) {
         self.name = name
         self.address = address
         self.latitude = latitude
         self.longitude = longitude
         self.date = date
+        self.deadlineApplications = deadlineApplications
     }
 }
