@@ -18,6 +18,7 @@
 		409B93F52ACC5A5D004CCF0A /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409B93F42ACC5A5D004CCF0A /* BottomSheetViewController.swift */; };
 		409B94212ACEFF7C004CCF0A /* LaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 409B94202ACEFF7C004CCF0A /* LaunchScreen.png */; };
 		40A981172AD92187003917F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40A981162AD92186003917F8 /* GoogleService-Info.plist */; };
+		40BB6F382AD98762000C04EE /* TournamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BB6F372AD98762000C04EE /* TournamentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		409B93F42ACC5A5D004CCF0A /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 		409B94202ACEFF7C004CCF0A /* LaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreen.png; sourceTree = "<group>"; };
 		40A981162AD92186003917F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		40BB6F372AD98762000C04EE /* TournamentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentViewController.swift; sourceTree = "<group>"; };
 		6713A2F04621379B458EB0D4 /* Pods-MatWarrior.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatWarrior.release.xcconfig"; path = "Target Support Files/Pods-MatWarrior/Pods-MatWarrior.release.xcconfig"; sourceTree = "<group>"; };
 		B041AEFCDC77152EBAFFB845 /* Pods-MatWarrior.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatWarrior.debug.xcconfig"; path = "Target Support Files/Pods-MatWarrior/Pods-MatWarrior.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,6 +116,7 @@
 				409B93DE2ACBCA03004CCF0A /* Main.storyboard */,
 				409B93DC2ACBCA03004CCF0A /* ViewController.swift */,
 				409B93F42ACC5A5D004CCF0A /* BottomSheetViewController.swift */,
+				40BB6F372AD98762000C04EE /* TournamentViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				409B93DD2ACBCA03004CCF0A /* ViewController.swift in Sources */,
+				40BB6F382AD98762000C04EE /* TournamentViewController.swift in Sources */,
 				409B93F52ACC5A5D004CCF0A /* BottomSheetViewController.swift in Sources */,
 				409B93F22ACC4291004CCF0A /* PlaceViewModel.swift in Sources */,
 				409B93D92ACBCA03004CCF0A /* AppDelegate.swift in Sources */,
