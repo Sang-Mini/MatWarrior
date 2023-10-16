@@ -15,13 +15,6 @@ class TournamentViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // 대회 정보를 표시하는 UI를 추가
-//        let label = UILabel()
-//        label.text = "대회 정보 화면"
-//        label.textAlignment = .center
-//        label.frame = CGRect(x: 0, y: 100, width: view.frame.width, height: 30)
-//        view.addSubview(label)
         
         // dataSource 대리자 설정
         tableView.dataSource = self
@@ -32,11 +25,10 @@ class TournamentViewController: UIViewController, UITableViewDataSource {
         return placeViewModel.places.count
     }
     
-    //
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TournamentCell", for: <#T##IndexPath#>)
-        
-        
-        return UITableViewCell()
+        // UITableViewCell 타입을 TournamentTableViewCell 타입으로 타입캐스팅
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TournamentCell", for: indexPath) as! TournamentTableViewCell
+
+        return cell
     }
 }
