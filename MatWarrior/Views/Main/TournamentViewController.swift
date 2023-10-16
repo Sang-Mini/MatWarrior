@@ -34,6 +34,9 @@ class TournamentViewController: UIViewController, UITableViewDataSource {
     
     //
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TournamentCell", for: <#T##IndexPath#>)
+        
+        
         return UITableViewCell()
     }
 }
