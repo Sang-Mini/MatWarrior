@@ -20,7 +20,7 @@ class TournamentViewController: UIViewController, UITableViewDataSource, UITable
         tableView.dataSource = self
         tableView.delegate = self
         // 테이블 뷰 cell 높이를 설정
-        tableView.rowHeight = 150
+        tableView.rowHeight = 130
     }
     
     // 몇 개의 테이블을 생성할 건지 구현하는 필수 구현 함수
