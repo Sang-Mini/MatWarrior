@@ -30,7 +30,8 @@ class TournamentViewController: UIViewController, UITableViewDataSource {
         // UITableViewCell 타입을 TournamentTableViewCell 타입으로 타입캐스팅
         let cell = tableView.dequeueReusableCell(withIdentifier: "TournamentCell", for: indexPath) as! TournamentTableViewCell
         
-        
+        let place = places[indexPath.row]
+        cell.configure(wirh: place)
 
         return cell
     }
