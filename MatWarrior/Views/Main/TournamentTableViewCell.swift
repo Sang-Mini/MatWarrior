@@ -23,5 +23,11 @@ class TournamentTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func configure(wirh place: Place) {
+        tournamentImageView.image = UIImage(named: "MarWarriorMarker")
+        tournamentNameLabel.text = place.name
+        tournamentDateLabel.text = place.date
+    }
 
 }

@@ -9,7 +9,7 @@ import UIKit
 
 class TournamentViewController: UIViewController, UITableViewDataSource {
     
-    var placeViewModel = PlaceViewModel()
+    var places: [Place] = []
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -22,12 +22,15 @@ class TournamentViewController: UIViewController, UITableViewDataSource {
     
     // 몇 개의 테이블을 생성할 건지 구현하는 필수 구현 함수
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return placeViewModel.places.count
+        return places.count
     }
     
+    // 테이블 뷰 cell을 그리는 메서드
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // UITableViewCell 타입을 TournamentTableViewCell 타입으로 타입캐스팅
         let cell = tableView.dequeueReusableCell(withIdentifier: "TournamentCell", for: indexPath) as! TournamentTableViewCell
+        
+        
 
         return cell
     }
