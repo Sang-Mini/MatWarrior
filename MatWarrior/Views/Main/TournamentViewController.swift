@@ -7,8 +7,8 @@
 
 import UIKit
 
-class TournamentViewController: UIViewController {
-    
+class TournamentViewController: UIViewController, UITableViewDataSource {
+
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -20,5 +20,14 @@ class TournamentViewController: UIViewController {
         label.textAlignment = .center
         label.frame = CGRect(x: 0, y: 100, width: view.frame.width, height: 30)
         view.addSubview(label)
+    }
+    
+    // 몇 개의 테이블을 생성할 건지 구현하는 필수 구현 함수
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
     }
 }
