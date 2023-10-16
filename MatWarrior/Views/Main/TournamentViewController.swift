@@ -8,6 +8,8 @@
 import UIKit
 
 class TournamentViewController: UIViewController, UITableViewDataSource {
+    
+    var places: [Place] = []
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -15,11 +17,11 @@ class TournamentViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
 
         // 대회 정보를 표시하는 UI를 추가
-        let label = UILabel()
-        label.text = "대회 정보 화면"
-        label.textAlignment = .center
-        label.frame = CGRect(x: 0, y: 100, width: view.frame.width, height: 30)
-        view.addSubview(label)
+//        let label = UILabel()
+//        label.text = "대회 정보 화면"
+//        label.textAlignment = .center
+//        label.frame = CGRect(x: 0, y: 100, width: view.frame.width, height: 30)
+//        view.addSubview(label)
         
         // dataSource 대리자 설정
         tableView.dataSource = self
