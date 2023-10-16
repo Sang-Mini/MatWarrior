@@ -7,10 +7,10 @@
 
 import UIKit
 
-class TournamentViewController: UIViewController, UITableViewDataSource {
+class TournamentViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
-    var places: [Place] = []
-
+    var placeViewModel = PlaceViewModel()
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -18,11 +18,14 @@ class TournamentViewController: UIViewController, UITableViewDataSource {
         
         // dataSource 대리자 설정
         tableView.dataSource = self
+        tableView.delegate = self
+        // 테이블 뷰 cell 높이를 설정
+        tableView.rowHeight = 150
     }
     
     // 몇 개의 테이블을 생성할 건지 구현하는 필수 구현 함수
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return places.count
+        return placeViewModel.getPlaces().count
     }
     
     // 테이블 뷰 cell을 그리는 메서드
@@ -30,9 +33,9 @@ class TournamentViewController: UIViewController, UITableViewDataSource {
         // UITableViewCell 타입을 TournamentTableViewCell 타입으로 타입캐스팅
         let cell = tableView.dequeueReusableCell(withIdentifier: "TournamentCell", for: indexPath) as! TournamentTableViewCell
         
-        let place = places[indexPath.row]
-        cell.configure(wirh: place)
-
+        let place = placeViewModel.getPlaces()[indexPath.row]
+        cell.configure(with: place)
+        
         return cell
     }
 }

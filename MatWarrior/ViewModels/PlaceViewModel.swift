@@ -30,4 +30,8 @@ class PlaceViewModel {
             Place(name: "나르샤 주짓수 챔피언십 포항", address: "포항 종합운동장 실내체육관", latitude: 36.008555, longitude: 129.360848, date: "2023-12-16 (토)", deadlineApplications: "2023-12-10 (일)"),
         ]
     }
+    
+    func getPlaces() -> [Place] {
+        return places
+    }
 }
