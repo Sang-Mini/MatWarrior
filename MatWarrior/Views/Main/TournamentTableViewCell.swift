@@ -8,7 +8,11 @@
 import UIKit
 
 class TournamentTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var tournamentImageView: UIImageView!
+    @IBOutlet weak var tournamentNameLabel: UILabel!
+    @IBOutlet weak var tournamentDateLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

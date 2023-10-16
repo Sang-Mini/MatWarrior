@@ -64,6 +64,11 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="iIc-d4-Ypv" secondAttribute="trailing" constant="10" id="qng-6W-8zR"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="tournamentDateLabel" destination="X5m-zc-sFj" id="g55-D5-Ux8"/>
+                                            <outlet property="tournamentImageView" destination="vi4-Q1-yma" id="INl-Sp-aNt"/>
+                                            <outlet property="tournamentNameLabel" destination="XNr-be-hOB" id="l8m-PW-J42"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
