@@ -23,4 +23,11 @@ struct Place {
         self.date = date
         self.deadlineApplications = deadlineApplications
     }
+    
+    var dateObject: Date? {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd (E)"
+        
+        return formatter.date(from: date)
+    }
 }

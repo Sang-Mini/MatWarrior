@@ -34,4 +34,8 @@ class PlaceViewModel {
     func getPlaces() -> [Place] {
         return places
     }
+    
+    func getSortedPlaces() -> [Place] {
+        return places.sorted { $0.dateObject ?? Date() < $1.dateObject ?? Date() }
+    }
 }

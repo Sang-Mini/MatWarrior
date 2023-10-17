@@ -25,7 +25,7 @@ class TournamentViewController: UIViewController, UITableViewDataSource, UITable
     
     // 몇 개의 테이블을 생성할 건지 구현하는 필수 구현 함수
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return placeViewModel.getPlaces().count
+        return placeViewModel.getSortedPlaces().count
     }
     
     // 테이블 뷰 cell을 그리는 메서드
@@ -33,7 +33,7 @@ class TournamentViewController: UIViewController, UITableViewDataSource, UITable
         // UITableViewCell 타입을 TournamentTableViewCell 타입으로 타입캐스팅
         let cell = tableView.dequeueReusableCell(withIdentifier: "TournamentCell", for: indexPath) as! TournamentTableViewCell
         
-        let place = placeViewModel.getPlaces()[indexPath.row]
+        let place = placeViewModel.getSortedPlaces()[indexPath.row]
         cell.configure(with: place)
         
         // 탭 했을때 스타일 제거
