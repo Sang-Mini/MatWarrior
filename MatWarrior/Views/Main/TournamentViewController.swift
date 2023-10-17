@@ -20,7 +20,7 @@ class TournamentViewController: UIViewController, UITableViewDataSource, UITable
         tableView.dataSource = self
         tableView.delegate = self
         // 테이블 뷰 cell 높이를 설정
-        tableView.rowHeight = 130
+        tableView.rowHeight = 180
     }
     
     // 몇 개의 테이블을 생성할 건지 구현하는 필수 구현 함수
@@ -35,6 +35,12 @@ class TournamentViewController: UIViewController, UITableViewDataSource, UITable
         
         let place = placeViewModel.getPlaces()[indexPath.row]
         cell.configure(with: place)
+        
+        // 탭 했을때 스타일 제거
+        cell.selectionStyle = .none
+        
+        // 밑줄 제거
+        tableView.separatorStyle = .none
         
         return cell
     }
