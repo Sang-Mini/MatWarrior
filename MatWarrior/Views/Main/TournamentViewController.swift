@@ -10,6 +10,7 @@ import UIKit
 class TournamentViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     var placeViewModel = PlaceViewModel()
+    var selectedPlace: Place?
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -45,21 +46,22 @@ class TournamentViewController: UIViewController, UITableViewDataSource, UITable
         
         return cell
     }
-     
+    
     // Cell 선택 시 화면 이동
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // 선택된 대회 정보 가져오기
-        let selectedPlace = placeViewModel.getSortedPlaces()[indexPath.row]
-        
+        selectedPlace = placeViewModel.getSortedPlaces()[indexPath.row]
+
         // 대회 장소 화면으로 이동
         if let placeViewController = storyboard?.instantiateViewController(withIdentifier: "ViewController") as? ViewController {
+            // 선택된 Cell 정보를 전달
             placeViewController.selectedPlace = selectedPlace
-            
+
             // 탭 바 컨트롤러에서 대회 장소 탭을 선택
             tabBarController?.selectedIndex = 1
-            
+
             // 대회 장소 화면으로 변경
-            navigationController?.setViewControllers([placeViewController], animated: true)
+            navigationController?.pushViewController(placeViewController, animated: true)
         }
     }
 }

@@ -16,7 +16,12 @@ class ViewController: UIViewController, NMFMapViewTouchDelegate, NMFMapViewCamer
     var naverMapView: NMFNaverMapView!
     let dataSource = NMFInfoWindowDefaultTextSource.data()
     var bottomSheetVC: BottomSheetViewController?
-    var selectedPlace: Place?
+    // 여기에 추가
+    var selectedPlace: Place? {
+        didSet {
+            configureUI()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,13 +43,14 @@ class ViewController: UIViewController, NMFMapViewTouchDelegate, NMFMapViewCamer
             return marker
         })
         
+        
         dataSource.title = "정보 창 내용"
         infoWindow.dataSource = dataSource
         
         // 마커를 탭하면:
         let handler = { [weak self] (overlay: NMFOverlay) -> Bool in
             if let marker = overlay as? NMFMarker,
-                let place = self?.place(for: marker) {
+               let place = self?.place(for: marker) {
                 // 현재 마커에 연결된 Place 객체의 이름으로 정보 창 내용 설정
                 self?.dataSource.title = place.name
                 self?.infoWindow.open(with: marker)
@@ -86,6 +92,34 @@ class ViewController: UIViewController, NMFMapViewTouchDelegate, NMFMapViewCamer
         }
         
     }
+    
+    func configureUI() {
+        guard let selectedPlace = selectedPlace else {
+            return
+        }
+        
+        if let marker = findMarker(for: selectedPlace.latitude, placeLongitude: selectedPlace.longitude) {
+            marker.iconTintColor = UIColor.red
+            print("Marker color changed for place - Latitude: \(selectedPlace.latitude), Longitude: \(selectedPlace.longitude)")
+        } else {
+            print("Marker NOT found for place - Latitude: \(selectedPlace.latitude), Longitude: \(selectedPlace.longitude)")
+        }
+    }
+    
+    func findMarker(for placeLatitude: Double, placeLongitude: Double) -> NMFMarker? {
+        guard let index = markers.firstIndex(where: { marker in
+            guard let place = place(for: marker) else {
+                return false
+            }
+            return place.latitude == placeLatitude && place.longitude == placeLongitude
+        }) else {
+            print("Marker NOT found for place - Latitude: \(placeLatitude), Longitude: \(placeLongitude)")
+            return nil
+        }
+        print("Marker found for place - Latitude: \(placeLatitude), Longitude: \(placeLongitude)")
+        return markers[index]
+    }
+    
     
     // 지도를 탭하면 정보 창을 닫음
     func mapView(_ mapView: NMFMapView, didTapMap latlng: NMGLatLng, point: CGPoint) {
