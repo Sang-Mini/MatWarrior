@@ -124,7 +124,7 @@
         <!--대회 장소-->
         <scene sceneID="2j0-vD-aLm">
             <objects>
-                <viewController id="tUT-WW-z3p" customClass="ViewController" customModule="MatWarrior" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="tUT-WW-z3p" customClass="ViewController" customModule="MatWarrior" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FFT-Po-MLv">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

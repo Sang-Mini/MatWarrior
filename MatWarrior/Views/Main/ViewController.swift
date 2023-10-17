@@ -16,6 +16,7 @@ class ViewController: UIViewController, NMFMapViewTouchDelegate, NMFMapViewCamer
     var naverMapView: NMFNaverMapView!
     let dataSource = NMFInfoWindowDefaultTextSource.data()
     var bottomSheetVC: BottomSheetViewController?
+    var selectedPlace: Place?
     
     override func viewDidLoad() {
         super.viewDidLoad()
