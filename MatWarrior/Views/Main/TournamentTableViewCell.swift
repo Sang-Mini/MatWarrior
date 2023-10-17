@@ -12,6 +12,7 @@ class TournamentTableViewCell: UITableViewCell {
     @IBOutlet weak var tournamentImageView: UIImageView!
     @IBOutlet weak var tournamentNameLabel: UILabel!
     @IBOutlet weak var tournamentDateLabel: UILabel!
+    @IBOutlet weak var tournamentDeadlineApplicationLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,14 +35,15 @@ class TournamentTableViewCell: UITableViewCell {
     func configure(with place: Place) {
         tournamentImageView.image = UIImage(named: "MarWarriorMarker")
         tournamentNameLabel.text = place.name
-        tournamentDateLabel.text = place.date
+        tournamentDateLabel.text = "대회 날짜 : \(place.date)"
+        tournamentDeadlineApplicationLabel.text = "신청 기간 : \(place.deadlineApplications) 까지"
     }
     
     private func setupUI() {
         // 테두리 추가
         contentView.layer.borderColor = UIColor.lightGray.cgColor
         contentView.layer.borderWidth = 1.0
-        contentView.layer.cornerRadius = 8.0 // 셀 모서리를 둥글게 만듦
+        contentView.layer.cornerRadius = 10.0 // 셀 모서리를 둥글게 만듦
         contentView.clipsToBounds = true
     }
     

@@ -42,9 +42,9 @@ class TournamentViewController: UIViewController, UITableViewDataSource, UITable
         // 밑줄 제거
         tableView.separatorStyle = .none
         
-        // 대회 이름 굵게 처리
-        cell.tournamentNameLabel.font = UIFont.boldSystemFont(ofSize: 20.0) // 적절한 폰트 크기 사용
-        
+        // 대회 이름 굵게 철
+        cell.tournamentNameLabel.font = UIFont.boldSystemFont(ofSize: 21.0) // 적절한 폰트 크기 사용
+                
         return cell
     }
 }
