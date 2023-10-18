@@ -93,33 +93,10 @@ class ViewController: UIViewController, NMFMapViewTouchDelegate, NMFMapViewCamer
         
     }
     
+    // view 전체를 다시 그림
     func configureUI() {
-        guard let selectedPlace = selectedPlace else {
-            return
-        }
-        
-        if let marker = findMarker(for: selectedPlace.latitude, placeLongitude: selectedPlace.longitude) {
-            marker.iconTintColor = UIColor.red
-            print("Marker color changed for place - Latitude: \(selectedPlace.latitude), Longitude: \(selectedPlace.longitude)")
-        } else {
-            print("Marker NOT found for place - Latitude: \(selectedPlace.latitude), Longitude: \(selectedPlace.longitude)")
-        }
+        view.setNeedsDisplay()
     }
-    
-    func findMarker(for placeLatitude: Double, placeLongitude: Double) -> NMFMarker? {
-        guard let index = markers.firstIndex(where: { marker in
-            guard let place = place(for: marker) else {
-                return false
-            }
-            return place.latitude == placeLatitude && place.longitude == placeLongitude
-        }) else {
-            print("Marker NOT found for place - Latitude: \(placeLatitude), Longitude: \(placeLongitude)")
-            return nil
-        }
-        print("Marker found for place - Latitude: \(placeLatitude), Longitude: \(placeLongitude)")
-        return markers[index]
-    }
-    
     
     // 지도를 탭하면 정보 창을 닫음
     func mapView(_ mapView: NMFMapView, didTapMap latlng: NMGLatLng, point: CGPoint) {
