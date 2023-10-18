@@ -12,7 +12,10 @@ class BottomSheetViewController: UIViewController {
     var place: Place?
     
     override func viewWillAppear(_ animated: Bool) {
+        
         super.viewWillAppear(animated)
+        
+        print("viewWillAppear 호출")
         
         view.backgroundColor = UIColor.white.withAlphaComponent(0.8) // 0.7는 투명도를 나타냅니다.
         

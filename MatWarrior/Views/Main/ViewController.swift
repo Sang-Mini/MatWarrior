@@ -16,7 +16,6 @@ class ViewController: UIViewController, NMFMapViewTouchDelegate, NMFMapViewCamer
     var naverMapView: NMFNaverMapView!
     let dataSource = NMFInfoWindowDefaultTextSource.data()
     var bottomSheetVC: BottomSheetViewController?
-    // 여기에 추가
     var selectedPlace: Place? {
         didSet {
             configureUI()
@@ -54,22 +53,22 @@ class ViewController: UIViewController, NMFMapViewTouchDelegate, NMFMapViewCamer
                 // 현재 마커에 연결된 Place 객체의 이름으로 정보 창 내용 설정
                 self?.dataSource.title = place.name
                 self?.infoWindow.open(with: marker)
-                
+
                 // 바텀시트 뷰 컨트롤러를 생성하고 정보 전달
                 let newBottomSheetVC = BottomSheetViewController()
                 newBottomSheetVC.place = place
-                
+
                 // 만약 이미 bottomSheetVC가 있다면, 기존 것을 제거
                 self?.bottomSheetVC?.view.removeFromSuperview()
                 self?.bottomSheetVC?.removeFromParent()
-                
+
                 // 새로운 뷰 컨트롤러를 설정하고 추가
                 self?.bottomSheetVC = newBottomSheetVC
                 self?.addChild(newBottomSheetVC)
                 newBottomSheetVC.view.frame = CGRect(x: 0, y: self?.view.frame.height ?? 0 - 300, width: self?.view.frame.width ?? 0, height: 300)
                 self?.view.addSubview(newBottomSheetVC.view)
                 newBottomSheetVC.didMove(toParent: self)
-                
+
                 // 바텀시트 뷰 애니메이션
                 UIView.animate(withDuration: 0.3) {
                     if let height = self?.view.frame.height {
@@ -90,12 +89,29 @@ class ViewController: UIViewController, NMFMapViewTouchDelegate, NMFMapViewCamer
         markers.forEach { marker in
             marker.touchHandler = handler
         }
-        
     }
     
-    // view 전체를 다시 그림
+    
+    // view 전
     func configureUI() {
         view.setNeedsDisplay()
+    }
+    
+    func findMarker(for selectedPlace: Place) -> NMFMarker? {
+        for marker in markers {
+            guard let place = place(for: marker) else {
+                print("마커에 연결된 Place 정보가 없습니다.")
+                continue
+            }
+            
+            if place.latitude == selectedPlace.latitude && place.longitude == selectedPlace.longitude {
+                print("Marker found - Latitude: \(place.latitude), Longitude: \(place.longitude)")
+                return marker
+            }
+        }
+        
+        print("Marker NOT found for place - Latitude: \(selectedPlace.latitude), Longitude: \(selectedPlace.longitude)")
+        return nil
     }
     
     // 지도를 탭하면 정보 창을 닫음
@@ -133,5 +149,3 @@ class ViewController: UIViewController, NMFMapViewTouchDelegate, NMFMapViewCamer
         return viewModel.places[index]
     }
 }
-
-
