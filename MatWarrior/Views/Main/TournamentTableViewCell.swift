@@ -33,7 +33,7 @@ class TournamentTableViewCell: UITableViewCell {
     }
     
     func configure(with place: Place) {
-        tournamentImageView.image = UIImage(named: "MarWarriorMarker")
+        tournamentImageView.image = place.image
         tournamentNameLabel.text = place.name
         tournamentDateLabel.text = "대회 날짜 : \(place.date)"
         tournamentDeadlineApplicationLabel.text = "신청 기간 : \(place.deadlineApplications) 까지"

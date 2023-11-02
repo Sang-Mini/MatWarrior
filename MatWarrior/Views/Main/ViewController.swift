@@ -42,7 +42,6 @@ class ViewController: UIViewController, NMFMapViewTouchDelegate, NMFMapViewCamer
             return marker
         })
         
-        
         dataSource.title = "정보 창 내용"
         infoWindow.dataSource = dataSource
         
@@ -91,8 +90,6 @@ class ViewController: UIViewController, NMFMapViewTouchDelegate, NMFMapViewCamer
         }
     }
     
-    
-    // view 전
     func configureUI() {
         view.setNeedsDisplay()
     }
@@ -100,18 +97,23 @@ class ViewController: UIViewController, NMFMapViewTouchDelegate, NMFMapViewCamer
     func findMarker(for selectedPlace: Place) -> NMFMarker? {
         for marker in markers {
             guard let place = place(for: marker) else {
-                print("마커에 연결된 Place 정보가 없습니다.")
                 continue
             }
             
             if place.latitude == selectedPlace.latitude && place.longitude == selectedPlace.longitude {
-                print("Marker found - Latitude: \(place.latitude), Longitude: \(place.longitude)")
                 return marker
             }
         }
-        
-        print("Marker NOT found for place - Latitude: \(selectedPlace.latitude), Longitude: \(selectedPlace.longitude)")
         return nil
+    }
+    
+    func updateSelectedMarkerColor() {
+        if let selectedPlace = selectedPlace {
+            if let marker = findMarker(for: selectedPlace) {
+                marker.iconTintColor = UIColor.red
+                print("마커 색상을 변경합니다.")
+            }
+        }
     }
     
     // 지도를 탭하면 정보 창을 닫음
@@ -130,7 +132,7 @@ class ViewController: UIViewController, NMFMapViewTouchDelegate, NMFMapViewCamer
     func addMarker(for place: Place, on mapView: NMFMapView) -> NMFMarker {
         let marker = NMFMarker()
         marker.position = NMGLatLng(lat: place.latitude, lng: place.longitude)
-        marker.iconImage = NMFOverlayImage(name: "MarWarriorMarker")
+        marker.iconImage = NMFOverlayImage(name: "MatWarriorMarker")
         marker.iconTintColor = UIColor.black
         marker.width = 35
         marker.height = 35

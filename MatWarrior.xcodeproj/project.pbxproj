@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4047F6B12AF2A55B00D8F476 /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = 4047F6B02AF2A55B00D8F476 /* GoogleService-Info (1).plist */; };
+		4047F6B42AF2A5F600D8F476 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 4047F6B32AF2A5F600D8F476 /* FirebaseAnalytics */; };
 		409B93D92ACBCA03004CCF0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409B93D82ACBCA03004CCF0A /* AppDelegate.swift */; };
 		409B93DB2ACBCA03004CCF0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409B93DA2ACBCA03004CCF0A /* SceneDelegate.swift */; };
 		409B93DD2ACBCA03004CCF0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409B93DC2ACBCA03004CCF0A /* ViewController.swift */; };
@@ -17,12 +19,12 @@
 		409B93F22ACC4291004CCF0A /* PlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409B93F12ACC4291004CCF0A /* PlaceViewModel.swift */; };
 		409B93F52ACC5A5D004CCF0A /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409B93F42ACC5A5D004CCF0A /* BottomSheetViewController.swift */; };
 		409B94212ACEFF7C004CCF0A /* LaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 409B94202ACEFF7C004CCF0A /* LaunchScreen.png */; };
-		40A981172AD92187003917F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40A981162AD92186003917F8 /* GoogleService-Info.plist */; };
 		40BB6F382AD98762000C04EE /* TournamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BB6F372AD98762000C04EE /* TournamentViewController.swift */; };
 		40BB6F3C2ADD82BE000C04EE /* TournamentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BB6F3B2ADD82BE000C04EE /* TournamentTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4047F6B02AF2A55B00D8F476 /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
 		409B93D52ACBCA03004CCF0A /* MatWarrior.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatWarrior.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		409B93D82ACBCA03004CCF0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		409B93DA2ACBCA03004CCF0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +37,6 @@
 		409B93F12ACC4291004CCF0A /* PlaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewModel.swift; sourceTree = "<group>"; };
 		409B93F42ACC5A5D004CCF0A /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 		409B94202ACEFF7C004CCF0A /* LaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreen.png; sourceTree = "<group>"; };
-		40A981162AD92186003917F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		40BB6F372AD98762000C04EE /* TournamentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentViewController.swift; sourceTree = "<group>"; };
 		40BB6F3B2ADD82BE000C04EE /* TournamentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentTableViewCell.swift; sourceTree = "<group>"; };
 		6713A2F04621379B458EB0D4 /* Pods-MatWarrior.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatWarrior.release.xcconfig"; path = "Target Support Files/Pods-MatWarrior/Pods-MatWarrior.release.xcconfig"; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4047F6B42AF2A5F600D8F476 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +85,7 @@
 				409B93E12ACBCA04004CCF0A /* Assets.xcassets */,
 				409B93E32ACBCA04004CCF0A /* LaunchScreen.storyboard */,
 				409B93E62ACBCA04004CCF0A /* Info.plist */,
-				40A981162AD92186003917F8 /* GoogleService-Info.plist */,
+				4047F6B02AF2A55B00D8F476 /* GoogleService-Info (1).plist */,
 			);
 			path = MatWarrior;
 			sourceTree = "<group>";
@@ -175,6 +177,7 @@
 			);
 			name = MatWarrior;
 			packageProductDependencies = (
+				4047F6B32AF2A5F600D8F476 /* FirebaseAnalytics */,
 			);
 			productName = MatWarrior;
 			productReference = 409B93D52ACBCA03004CCF0A /* MatWarrior.app */;
@@ -205,7 +208,7 @@
 			);
 			mainGroup = 409B93CC2ACBCA03004CCF0A;
 			packageReferences = (
-				40A981182AD92220003917F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				4047F6B22AF2A5F600D8F476 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 409B93D62ACBCA03004CCF0A /* Products */;
 			projectDirPath = "";
@@ -223,7 +226,7 @@
 			files = (
 				409B94212ACEFF7C004CCF0A /* LaunchScreen.png in Resources */,
 				409B93E52ACBCA04004CCF0A /* LaunchScreen.storyboard in Resources */,
-				40A981172AD92187003917F8 /* GoogleService-Info.plist in Resources */,
+				4047F6B12AF2A55B00D8F476 /* GoogleService-Info (1).plist in Resources */,
 				409B93E22ACBCA04004CCF0A /* Assets.xcassets in Resources */,
 				409B93E02ACBCA03004CCF0A /* Main.storyboard in Resources */,
 			);
@@ -507,7 +510,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		40A981182AD92220003917F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		4047F6B22AF2A5F600D8F476 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
@@ -516,6 +519,14 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4047F6B32AF2A5F600D8F476 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4047F6B22AF2A5F600D8F476 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 409B93CD2ACBCA03004CCF0A /* Project object */;
 }

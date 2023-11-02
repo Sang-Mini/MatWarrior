@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyB5DZBpTWntVlaZn34816BB_vNaec7h0Eg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1013719087821</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.dean.MatWarrior</string>
+	<key>PROJECT_ID</key>
+	<string>matwarrior-6dc9d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>matwarrior-6dc9d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1013719087821:ios:8b46155c394dd84f0dc784</string>
+	<key>DATABASE_URL</key>
+	<string>https://matwarrior-6dc9d-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>

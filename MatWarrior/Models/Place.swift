@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Place {
     let name: String
@@ -14,14 +15,16 @@ struct Place {
     let longitude: Double
     let date: String
     let deadlineApplications: String
+    let image: UIImage?
     
-    init(name: String, address: String, latitude: Double, longitude: Double, date: String, deadlineApplications: String) {
+    init(name: String, address: String, latitude: Double, longitude: Double, date: String, deadlineApplications: String, image: UIImage) {
         self.name = name
         self.address = address
         self.latitude = latitude
         self.longitude = longitude
         self.date = date
         self.deadlineApplications = deadlineApplications
+        self.image = image
     }
     
     var dateObject: Date? {
